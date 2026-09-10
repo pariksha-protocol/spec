@@ -5,12 +5,11 @@ type: software
 version: draft-01
 date-released: 2026-08-29
 authors:
+  - family-names: "Krishnan"
+    given-names: "Anantha"
+    affiliation: "Sarva Labs Inc."
   - name: "Sarva Labs Inc."
-    city: Princeton
-    country: US
   - name: "Algix Technologies Pvt. Ltd."
-    city: Coimbatore
-    country: IN
 repository-code: "https://github.com/pariksha-protocol/spec"
 license: "CC-BY-4.0 AND Apache-2.0"
 keywords:
