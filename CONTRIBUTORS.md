@@ -1,9 +1,11 @@
 # Contributors
 
-## Initial editors (draft-01)
+## Editors (draft-01)
 
-- Sarva Labs Inc., Princeton, NJ
-- Algix Technologies Pvt. Ltd., Coimbatore, India
+- Anantha Krishnan — architect and initial editor (Sarva Labs Inc., Princeton / Coimbatore)
+
+Draft-01 was prepared and released for independent stewardship by
+Sarva Labs Inc. and Algix Technologies Pvt. Ltd.
 
 ## Contributors
 
