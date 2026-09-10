@@ -3,7 +3,8 @@
   "upload_type": "publication",
   "publication_type": "technicalnote",
   "description": "An open specification for conducting public examinations such that every artifact is a verifiable credential, every act is bound to an identified participant under explicit expiring authority, and every event is witnessed on a tamper-evident ledger. Delivery-agnostic and implementation-agnostic. Released for public comment and independent stewardship; submitted to India's High-Powered Task Force on Reforms in Public Examinations, August 2026.",
-  "creators": [
+    "creators": [
+    {"name": "Krishnan, Anantha", "affiliation": "Sarva Labs Inc."},
     {"name": "Sarva Labs Inc."},
     {"name": "Algix Technologies Pvt. Ltd."}
   ],
