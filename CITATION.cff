@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: "The Pariksha Protocol: Verifiable Custody and Conduct for Examinations"
+message: "If you use this specification, please cite it as below."
+type: software
+version: draft-01
+date-released: 2026-08-29
+authors:
+  - name: "Sarva Labs Inc."
+    city: Princeton
+    country: US
+  - name: "Algix Technologies Pvt. Ltd."
+    city: Coimbatore
+    country: IN
+repository-code: "https://github.com/pariksha-protocol/spec"
+license: "CC-BY-4.0 AND Apache-2.0"
+keywords:
+  - examination integrity
+  - verifiable credentials
+  - chain of custody
+  - digital public infrastructure
+  - participant-centric computation

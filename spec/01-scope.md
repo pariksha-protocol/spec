@@ -1,0 +1,7 @@
+# 1. Scope, Terminology, and Conformance Language
+
+This document specifies the Pariksha Protocol Examination Core Profile: the minimal normative core for conducting a public examination such that every artifact is a verifiable credential, every act is bound to an identified participant under explicit authority, and every event is witnessed on a tamper-evident ledger. The profile covers one examination instance from definition to independently verifiable results, over pen-and-paper or device delivery, online or offline.
+
+The key words MUST, MUST NOT, SHOULD, SHOULD NOT, and MAY are to be interpreted as in RFC 2119. “The Protocol” refers to this specification; “an Implementation” refers to any conforming software; the Protocol names none. The Protocol is delivery-agnostic: nothing in the normative core assumes paper, screen, or any particular rendering of the examination content. It is also a two-layer standard: this core, which names no country, identity system, or role; and profiles, which fill those in for one setting. Draft-01 ships with one profile, [Examination Profile — India](../profiles/examination-india.md). A conforming Implementation claims the core plus a named profile.
+
+Design lineage: the Protocol instantiates participant-centric computation — the WHO as a first-class dimension of every event — as developed in the Contextual Compute research programme (see the companion paper, On the Truth of Custody). Familiarity with either is not required to implement the Protocol.

@@ -1,0 +1,12 @@
+{
+  "event_id": "evt_01J9Q6ZK3P5R7T9V1X3Z5B7D9F",
+  "type": "denial.key.requested",
+  "exam_id": "BOARD-2026-P1",
+  "context": "centre:C012",
+  "artifact": { "credential_id": "PKG-C012", "sha256": "9f3a4c7e1b2d8a6f0e5c3b9d7a1f4e8c2b6d0a9f3e7c1b5d8a2f6e0c4b9d3a7e" },
+  "participant": { "credential": "vc:example:off:8842", "role": "centre.super" },
+  "denial": { "rule": "window.closed", "detail": "request at 2026-10-11T07:41:03+05:30; window opens 08:50:00" },
+  "witness": { "ledger_anchor": "ledger:tx:4c19d9a1", "ts": "2026-10-11T07:41:03+05:30" },
+  "presentation_proof": null,
+  "prev": "sha256:0f1e2d3c4b5a69788796a5b4c3d2e1f00f1e2d3c4b5a69788796a5b4c3d2e1f0"
+}

@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pariksha-protocol.org/schemas/draft-01/event.schema.json",
+  "title": "Pariksha Witnessed Event",
+  "description": "Every ISSUE, CUSTODY transfer and PRESENT — including every refusal — is an instance of this schema (spec §8). Rules E1–E5 apply.",
+  "type": "object",
+  "required": ["event_id", "type", "exam_id", "context", "participant", "witness", "prev"],
+  "additionalProperties": false,
+  "properties": {
+    "event_id":  { "type": "string", "description": "Unique, sortable identifier (e.g. ULID)." },
+    "type":      { "$ref": "#/$defs/eventType" },
+    "exam_id":   { "type": "string" },
+    "context":   { "type": "string", "pattern": "^[a-z]+:[A-Za-z0-9_-]+$", "description": "Bounded interaction locale, e.g. centre:C012 (spec §6.1)." },
+    "artifact": {
+      "type": "object",
+      "required": ["credential_id", "sha256"],
+      "properties": {
+        "credential_id": { "type": "string" },
+        "sha256":        { "type": "string", "pattern": "^[0-9a-f]{64}$|^[0-9a-f]{4,}\\.\\.\\.$" }
+      }
+    },
+    "participant": {
+      "type": "object",
+      "description": "E1: mandatory. There are no system events without a credential.",
+      "required": ["credential", "role"],
+      "properties": {
+        "credential": { "type": "string", "description": "Credential identifier of the acting participant (human or device)." },
+        "role":       { "type": "string", "description": "Role from the profile's actor taxonomy, e.g. centre.super." }
+      }
+    },
+    "grant": {
+      "type": "object",
+      "required": ["grant_id", "scope", "window"],
+      "properties": {
+        "grant_id": { "type": "string" },
+        "scope":    { "type": "string", "description": "verb:object, e.g. decrypt:PKG-C012" },
+        "quorum":   { "type": "string", "pattern": "^[0-9]+-of-[0-9]+$" },
+        "window":   { "$ref": "#/$defs/window" },
+        "expires_on_use": { "type": "boolean", "default": true }
+      }
+    },
+    "denial": {
+      "type": "object",
+      "description": "E3: present on denial.* events. Carries the refusing rule and the presenting credential.",
+      "required": ["rule"],
+      "properties": {
+        "rule":   { "type": "string", "description": "Identifier of the rule that refused, e.g. window.closed, proof.tier.insufficient, quorum.same-root" },
+        "detail": { "type": "string" }
+      }
+    },
+    "witness": {
+      "type": "object",
+      "required": ["ts"],
+      "properties": {
+        "ledger_anchor": { "type": ["string", "null"], "description": "Anchor on the ledger; null while buffered offline (spec §9), filled at checkpoint." },
+        "ts":            { "type": "string", "format": "date-time" }
+      }
+    },
+    "presentation_proof": {
+      "type": ["object", "null"],
+      "description": "null in v1 (plain signed disclosure). From v1.1 carries a zero-knowledge proof of identity AND standing (spec §4.2)."
+    },
+    "prev": {
+      "type": ["string", "null"],
+      "description": "E2: hash of the previous event in this context's chain. null only for the context's genesis event.",
+      "pattern": "^sha256:[0-9a-f]{4,}(\\.\\.\\.)?$"
+    }
+  },
+  "$defs": {
+    "window": {
+      "type": "object",
+      "required": ["start", "end"],
+      "properties": {
+        "start": { "type": "string", "format": "date-time" },
+        "end":   { "type": "string", "format": "date-time" }
+      }
+    },
+    "eventType": {
+      "type": "string",
+      "description": "Enumerated in examples/custody-lifecycle.md. Implementations MAY add profile-specific types under a namespace prefix.",
+      "anyOf": [
+        { "enum": [
+          "exam.defined", "policy.set", "policy.variance",
+          "participant.registered", "participant.revoked",
+          "papervc.issued", "key.split", "plaintext.destroyed",
+          "custody.transfer", "custody.received",
+          "window.armed",
+          "papervc.verified", "key.requested", "grant.issued", "key.released", "artifact.decrypted", "key.expired",
+          "room.sealed", "render.completed", "distribution.completed", "collection.reconciled",
+          "session.bound", "response.recorded", "session.completed",
+          "alert.raised", "alert.acknowledged",
+          "context.checkpoint",
+          "results.anchored", "vc.issued", "vc.verified", "integrity.certified"
+        ] },
+        { "pattern": "^denial\\.[a-z.-]+$" },
+        { "pattern": "^x-[a-z0-9-]+\\.[a-z.-]+$" }
+      ]
+    }
+  }
+}
