@@ -2,6 +2,7 @@
 
 **Verifiable custody and conduct for examinations.**
 Working Draft 01 (`draft-pariksha-core-01`) · 29 August 2026
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22731201.svg)](https://doi.org/10.5281/zenodo.22731201)
 
 The Pariksha Protocol is an open specification for conducting a public examination such that every artifact is a verifiable credential, every act is bound to an identified participant under explicit, expiring authority, and every event — including every refusal — is witnessed on a tamper-evident ledger.
 
@@ -50,17 +51,17 @@ Nothing here is final. Open an issue against any section. See [GOVERNANCE.md](GO
 
 ## Companion documents
 
-- **Pramāṇa: A National Public Utility for Examination Integrity** — the policy paper that motivates the protocol and proposes the utility, rollout ladder and governance around it. DOI: _(to be added on Zenodo publication)_
+- **Pramāṇa: A National Public Utility for Examination Integrity** — the policy paper that motivates the protocol and proposes the utility, rollout ladder and governance around it. DOI: _[10.5281/zenodo.22731249](https://doi.org/10.5281/zenodo.22731249)_
 - **On the Truth of Custody** (Contextual Compute series, CC7) — the kernel theory: the artifact/action factorisation the protocol rests on. DOI: _(pending)_
 
 ## Citing
 
-Until the Zenodo DOI is minted, cite as:
-
-> Pariksha Protocol Editors. *The Pariksha Protocol: Verifiable Custody and Conduct for Examinations*, Working Draft 01 (draft-pariksha-core-01), 29 August 2026. https://github.com/pariksha-protocol/spec
+> Krishnan, A., Sarva Labs Inc., & Algix Technologies Pvt. Ltd. (2026).
+> *The Pariksha Protocol: Verifiable Custody and Conduct for Examinations*,
+> Working Draft 01 (draft-pariksha-core-01).
+> https://doi.org/10.5281/zenodo.22731201
 
 A `CITATION.cff` is provided; GitHub renders a "Cite this repository" button from it.
-
 ## Licence
 
 Specification text: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
