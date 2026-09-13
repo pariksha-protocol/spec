@@ -67,6 +67,11 @@ Specification text: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 Schemas, examples and any code: [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 See [LICENSE.md](LICENSE.md).
 
-## Initial editors
+## Editors
 
-Sarva Labs Inc. (Princeton, NJ) and Algix Technologies Pvt. Ltd. (Coimbatore, India) prepared this draft and are releasing it for independent stewardship. The protocol instantiates participant-centric computation as developed in the Contextual Compute research programme.
+- **Anantha Krishnan** — architect and initial editor (Sarva Labs Inc.)
+
+Draft-01 was prepared by Sarva Labs Inc. (Princeton, NJ) and Algix
+Technologies Pvt. Ltd.  and is released for
+independent stewardship. The protocol instantiates participant-centric
+computation as developed in the Contextual Compute research programme.
